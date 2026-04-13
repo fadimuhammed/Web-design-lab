@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Calculator</title>
+
+<script>
+function calculate(op) {
+    let a = parseFloat(document.getElementById("num1").value);
+    let b = parseFloat(document.getElementById("num2").value);
+    let result;
+
+    if(op == '+') result = a + b;
+    if(op == '-') result = a - b;
+    if(op == '*') result = a * b;
+    if(op == '/') result = a / b;
+
+    document.getElementById("result").value = result;
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Calculator</h1>
+
+<input type="text" id="num1">
+<input type="text" id="num2"><br><br>
+
+<button onclick="calculate('+')">Add</button>
+<button onclick="calculate('-')">Subtract</button>
+<button onclick="calculate('*')">Multiply</button>
+<button onclick="calculate('/')">Divide</button>
+
+<br><br>
+Result: <input type="text" id="result">
+
+</body>
+</html>
